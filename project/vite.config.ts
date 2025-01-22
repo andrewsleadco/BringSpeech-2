@@ -4,16 +4,22 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  optimizeDeps: {
-    exclude: ['lucide-react'],
-  },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'),
+      '@': path.resolve(__dirname, './'),
+      '@utils': path.resolve(__dirname, './utils'),
     },
+  },
+  server: {
+    watch: {
+      usePolling: true,
+    },
+    host: true,
+    strictPort: true,
+    port: 5173,
   },
   build: {
     outDir: 'dist',
     sourcemap: true,
-  },
+  }
 });
