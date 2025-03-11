@@ -1,6 +1,6 @@
 // Then update src/App.tsx to include the new route:
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import App from './pages/_app'
+
 import Dashboard from './pages/Dashboard'
 
 function AppRoot() {
